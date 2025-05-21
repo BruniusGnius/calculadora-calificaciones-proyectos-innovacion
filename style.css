@@ -1,0 +1,330 @@
+body {
+  font-family: sans-serif;
+  background-color: #222;
+  color: #eee;
+  margin: 0;
+  /* padding: 20px; Eliminamos padding superior para que el header ocupe todo el ancho */
+  line-height: 1.6;
+}
+
+/* ESTILOS PARA EL HEADER */
+header {
+  background-color: #111; /* Negro o gris muy oscuro */
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  border-bottom: 2px solid #fffb00; /* Un borde para separarlo visualmente */
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* FIN ESTILOS HEADER */
+
+.container {
+  max-width: 800px;
+  margin: 20px auto; /* Añadimos margen superior para separar del header */
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: 1px solid #555;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  color: #4caf50;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.indicador {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.indicador label {
+  flex-basis: 60%; /* Espacio para la etiqueta */
+  margin-bottom: 5px;
+}
+
+.indicador .opciones {
+  flex-basis: 40%; /* Espacio para los radio buttons */
+  display: flex;
+  gap: 15px; /* Espacio entre radio buttons */
+}
+
+.indicador input[type="radio"] {
+  margin-right: 5px;
+}
+
+.botones-accion {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button#resetButton {
+  background-color: #f44336; /* Rojo para reset */
+}
+
+button#resetButton:hover {
+  background-color: #da190b;
+}
+
+/* Estilo opcional para el botón de copiar si se quiere diferenciar */
+
+button#copyInputsButton {
+  background-color: #007bff;
+}
+button#copyInputsButton:hover {
+  background-color: #0056b3;
+}
+/**/
+
+/* ESTILOS PARA INFO COPIA */
+.info-copia {
+  font-size: 0.85em;
+  color: #bbb;
+  text-align: center;
+  margin-top: 15px; /* Espacio después de los botones */
+  padding: 0 10px; /* Un poco de padding lateral */
+}
+/* FIN ESTILOS INFO COPIA */
+
+#resultados {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+}
+
+#resultados h2,
+#resultados h3 {
+  color: #4caf50;
+  margin-top: 0;
+}
+
+/* Estilos para el desglose de puntajes mejorado */
+#detallePuntajes h3 {
+  margin-bottom: 15px;
+}
+
+.criterio-resultado {
+  background-color: #3a3a3a;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border-left: 4px solid #4caf50; /* Verde por defecto */
+}
+
+.criterio-resultado h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  font-size: 1.1em;
+}
+
+.criterio-resultado ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.criterio-resultado li {
+  margin-bottom: 6px;
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+.criterio-resultado li:last-child {
+  margin-bottom: 0;
+}
+
+.criterio-resultado li span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Colores de borde dinámicos para criterios */
+.criterio-resultado.border-rojo {
+  border-left-color: #d32f2f; /* Rojo - Newbie */
+}
+
+.criterio-resultado.border-amarillo {
+  border-left-color: #fbc02d; /* Amarillo - Guru */
+}
+
+/* Calificación Final */
+#calificacionFinalBloque h3 {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 1.4em;
+}
+#calificacionFinalBloque h3 span {
+  font-weight: bold;
+  color: #4caf50; /* Verde para destacar la calificación final */
+}
+
+/* Termómetro Gnius */
+.termometro-base {
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.termometro-rojo {
+  background-color: #d32f2f; /* Rojo */
+  color: white;
+}
+.termometro-rojo h3,
+.termometro-rojo strong {
+  color: white !important;
+}
+
+.termometro-amarillo {
+  background-color: #fbc02d; /* Amarillo */
+  color: #333; /* Texto oscuro para contraste */
+}
+.termometro-amarillo h3,
+.termometro-amarillo strong {
+  color: #333 !important;
+}
+
+.termometro-verde {
+  background-color: #388e3c; /* Verde */
+  color: white;
+}
+.termometro-verde h3,
+.termometro-verde strong {
+  color: white !important;
+}
+
+/* Estilos para el bloque de Feedback Gnius */
+#feedbackGnius p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.feedback-valor {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Ajustes específicos si el color del texto del termómetro interfiere con la legibilidad del feedback-valor */
+.termometro-rojo .feedback-valor,
+.termometro-verde .feedback-valor {
+  color: #fff;
+}
+
+.termometro-amarillo .feedback-valor {
+  color: #333;
+}
+
+#feedbackGnius h3 {
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .indicador {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .indicador label {
+    flex-basis: 100%;
+    margin-bottom: 8px;
+  }
+  .indicador .opciones {
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px 10px 10px; /* Padding solo en lados y abajo, el header maneja el superior */
+  }
+  .container {
+    padding: 15px;
+    margin-top: 10px; /* Menor margen en móviles */
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  header .logo {
+    font-size: 1.3em;
+  }
+  button {
+    padding: 10px 15px;
+    font-size: 14px;
+    width: 90%; /* Hacer botones más anchos en móviles pequeños */
+    box-sizing: border-box;
+  }
+  .indicador .opciones {
+    gap: 10px;
+  }
+  .info-copia {
+    font-size: 0.8em;
+  }
+  #calificacionFinalBloque h3 {
+    font-size: 1.2em;
+  }
+  .feedback-valor {
+    font-size: 1.3em;
+  }
+  #feedbackGnius h3 {
+    font-size: 1.1em;
+  }
+}

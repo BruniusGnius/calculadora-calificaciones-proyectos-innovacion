@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rúbrica - Proyecto Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NUEVO HEADER -->
+    <header>
+        <div style="max-width: 800px; width: 100%; margin:0 auto;  display: flex; flex-flow: row nowrap;">
+            <img style="max-width: 200px; display: inline-block;" src="assets/logo.png" alt="">
+
+        </div>
+
+    </header>
+    <!-- FIN NUEVO HEADER -->
+
+    <div class="container">
+        <h1>Calculadora de Rúbrica: Proyecto Final Alpha</h1>
+        <p class="subtitulo">Ingrese las calificaciones (1-Newbie, 2-Guru, 3-Wizard) para cada indicador.</p>
+
+        <form id="rubricaForm">
+            <!-- ... (todo el contenido del formulario fieldsets, etc. permanece igual) ... -->
+            <fieldset>
+                <legend>Innovación (Ponderación: 35%)</legend>
+                <div class="criterio" id="criterio-innovacion">
+                    <div class="indicador">
+                        <label for="innovacion_problema">Definición del problema:</label>
+                        <div class="opciones">
+                            <input type="radio" name="innovacion_problema" value="1" required> 1
+                            <input type="radio" name="innovacion_problema" value="2"> 2
+                            <input type="radio" name="innovacion_problema" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="innovacion_nivel">Nivel de innovación:</label>
+                        <div class="opciones">
+                            <input type="radio" name="innovacion_nivel" value="1" required> 1
+                            <input type="radio" name="innovacion_nivel" value="2"> 2
+                            <input type="radio" name="innovacion_nivel" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="innovacion_metodologia">Uso de la Metodología de Innovación:</label>
+                        <div class="opciones">
+                            <input type="radio" name="innovacion_metodologia" value="1" required> 1
+                            <input type="radio" name="innovacion_metodologia" value="2"> 2
+                            <input type="radio" name="innovacion_metodologia" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="innovacion_prototipo">Funcionalidad del prototipo:</label>
+                        <div class="opciones">
+                            <input type="radio" name="innovacion_prototipo" value="1" required> 1
+                            <input type="radio" name="innovacion_prototipo" value="2"> 2
+                            <input type="radio" name="innovacion_prototipo" value="3"> 3
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Uso de Tecnología (Ponderación: 25%)</legend>
+                <div class="criterio" id="criterio-tecnologia">
+                    <div class="indicador">
+                        <label for="tecnologia_aplicacion">Aplicación del conocimiento tecnológico:</label>
+                        <div class="opciones">
+                            <input type="radio" name="tecnologia_aplicacion" value="1" required> 1
+                            <input type="radio" name="tecnologia_aplicacion" value="2"> 2
+                            <input type="radio" name="tecnologia_aplicacion" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="tecnologia_integracion">Integración de elementos tecnológicos innovadores:</label>
+                        <div class="opciones">
+                            <input type="radio" name="tecnologia_integracion" value="1" required> 1
+                            <input type="radio" name="tecnologia_integracion" value="2"> 2
+                            <input type="radio" name="tecnologia_integracion" value="3"> 3
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Impacto (Ponderación: 20%)</legend>
+                <div class="criterio" id="criterio-impacto">
+                    <div class="indicador">
+                        <label for="impacto_alcance">Alcance:</label>
+                        <div class="opciones">
+                            <input type="radio" name="impacto_alcance" value="1" required> 1
+                            <input type="radio" name="impacto_alcance" value="2"> 2
+                            <input type="radio" name="impacto_alcance" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="impacto_ods">Alineación con ODS:</label>
+                        <div class="opciones">
+                            <input type="radio" name="impacto_ods" value="1" required> 1
+                            <input type="radio" name="impacto_ods" value="2"> 2
+                            <input type="radio" name="impacto_ods" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="impacto_beneficio">Potencial de beneficio:</label>
+                        <div class="opciones">
+                            <input type="radio" name="impacto_beneficio" value="1" required> 1
+                            <input type="radio" name="impacto_beneficio" value="2"> 2
+                            <input type="radio" name="impacto_beneficio" value="3"> 3
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Colaboración (Ponderación: 10%)</legend>
+                <div class="criterio" id="criterio-colaboracion">
+                    <div class="indicador">
+                        <label for="colaboracion_metodologias">Uso de Metodologías Colaborativas:</label>
+                        <div class="opciones">
+                            <input type="radio" name="colaboracion_metodologias" value="1" required> 1
+                            <input type="radio" name="colaboracion_metodologias" value="2"> 2
+                            <input type="radio" name="colaboracion_metodologias" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="colaboracion_participacion">Grado de participación y compromiso:</label>
+                        <div class="opciones">
+                            <input type="radio" name="colaboracion_participacion" value="1" required> 1
+                            <input type="radio" name="colaboracion_participacion" value="2"> 2
+                            <input type="radio" name="colaboracion_participacion" value="3"> 3
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Presentación (Ponderación: 10%)</legend>
+                <div class="criterio" id="criterio-presentacion">
+                    <div class="indicador">
+                        <label for="presentacion_claridad">Claridad y estructura:</label>
+                        <div class="opciones">
+                            <input type="radio" name="presentacion_claridad" value="1" required> 1
+                            <input type="radio" name="presentacion_claridad" value="2"> 2
+                            <input type="radio" name="presentacion_claridad" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="presentacion_argumentacion">Argumentación:</label>
+                        <div class="opciones">
+                            <input type="radio" name="presentacion_argumentacion" value="1" required> 1
+                            <input type="radio" name="presentacion_argumentacion" value="2"> 2
+                            <input type="radio" name="presentacion_argumentacion" value="3"> 3
+                        </div>
+                    </div>
+                    <div class="indicador">
+                        <label for="presentacion_comunicacion">Comunicación:</label>
+                        <div class="opciones">
+                            <input type="radio" name="presentacion_comunicacion" value="1" required> 1
+                            <input type="radio" name="presentacion_comunicacion" value="2"> 2
+                            <input type="radio" name="presentacion_comunicacion" value="3"> 3
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="botones-accion">
+                <button type="submit">Calcular Calificación</button>
+                <button type="button" id="resetButton">Resetear</button>
+                <button type="button" id="copyInputsButton">Copiar Calificaciones Ingresadas</button>
+            </div>
+            <!-- NUEVA INDICACIÓN DE ORDEN DE COPIA -->
+            <p class="info-copia">
+                Al presionar "Copiar Calificaciones Ingresadas", los 14 valores se copiarán al portapapeles en el orden
+                exacto en que aparecen en el formulario (desde "Definición del problema" hasta "Comunicación"), listos
+                para pegar en una fila de su hoja de cálculo.
+            </p>
+            <!-- FIN NUEVA INDICACIÓN -->
+        </form>
+
+        <div id="resultados" class="hidden">
+            <!-- ... (toda la sección de resultados permanece igual) ... -->
+            <h2>Resultados de la Evaluación</h2>
+
+            <div id="detallePuntajes">
+                <h3>Desglose de Puntajes:</h3>
+                <div class="criterio-resultado" id="resultado-innovacion">
+                    <h4>Innovación (Ponderación: 35%)</h4>
+                    <ul>
+                        <li>Puntaje Bruto: <span id="bruto_innovacion"></span> de 12</li>
+                        <li>Puntaje Ponderado: <span id="ponderado_innovacion"></span> de 35</li>
+                    </ul>
+                </div>
+                <div class="criterio-resultado" id="resultado-tecnologia">
+                    <h4>Uso de Tecnología (Ponderación: 25%)</h4>
+                    <ul>
+                        <li>Puntaje Bruto: <span id="bruto_tecnologia"></span> de 6</li>
+                        <li>Puntaje Ponderado: <span id="ponderado_tecnologia"></span> de 25</li>
+                    </ul>
+                </div>
+                <div class="criterio-resultado" id="resultado-impacto">
+                    <h4>Impacto (Ponderación: 20%)</h4>
+                    <ul>
+                        <li>Puntaje Bruto: <span id="bruto_impacto"></span> de 9</li>
+                        <li>Puntaje Ponderado: <span id="ponderado_impacto"></span> de 20</li>
+                    </ul>
+                </div>
+                <div class="criterio-resultado" id="resultado-colaboracion">
+                    <h4>Colaboración (Ponderación: 10%)</h4>
+                    <ul>
+                        <li>Puntaje Bruto: <span id="bruto_colaboracion"></span> de 6</li>
+                        <li>Puntaje Ponderado: <span id="ponderado_colaboracion"></span> de 10</li>
+                    </ul>
+                </div>
+                <div class="criterio-resultado" id="resultado-presentacion">
+                    <h4>Presentación (Ponderación: 10%)</h4>
+                    <ul>
+                        <li>Puntaje Bruto: <span id="bruto_presentacion"></span> de 9</li>
+                        <li>Puntaje Ponderado: <span id="ponderado_presentacion"></span> de 10</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="calificacionFinalBloque">
+                <h3>Calificación Final Ponderada (0-100): <span id="calificacionFinal"></span></h3>
+            </div>
+
+            <div id="feedbackGnius" class="termometro-base">
+                <h3>Feedback Gnius Club:</h3>
+                <p>Calificación Gnius (1-10): <span id="calificacionGnius" class="feedback-valor"></span></p>
+                <p>Descripción: <span id="descripcionGnius" class="feedback-valor"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
